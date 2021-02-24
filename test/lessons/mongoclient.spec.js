@@ -16,6 +16,7 @@ describe("MongoClient", async () => {
 
     let testClient
     try {
+      jest.setTimeout(30000)
       testClient = await MongoClient.connect(
         process.env.MFLIX_DB_URI,
         { useNewUrlParser: true },
